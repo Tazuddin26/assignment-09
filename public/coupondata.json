@@ -1,0 +1,206 @@
+[
+  {
+    "id": 1,
+    "brand_name": "Daraz",
+    "description": "Leading e-commerce platform in Bangladesh offering a wide range of products.",
+    "brand_logo": "https://i.ibb.co.com/k2bLXNJ/daraz.jpg",
+    "coupons": [
+      {
+        "coupon_code": "NEW10",
+        "discount": "10% off",
+        "expiry_date": "2024-12-31",
+        "categories": ["Fashion", "Electronics", "Home Appliances"]
+      }
+    ],
+    "shop_link": "https://www.daraz.com.bd",
+    "isSaleOn": true,
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "brand_name": "Rokomari",
+    "description": "Popular online bookstore offering discounts on books and stationery.",
+    "brand_logo": "https://i.ibb.co.com/J3xYkVg/rokomari.jpg",
+    "coupons": [
+      {
+        "coupon_code": "BOOKS20",
+        "discount": "20% off",
+        "expiry_date": "2024-12-25",
+        "categories": ["Books", "Stationery"]
+      }
+    ],
+    "shop_link": "https://www.rokomari.com",
+    "isSaleOn": true,
+    "rating": 4.6
+  },
+  {
+    "id": 3,
+    "brand_name": "HungryNaki",
+    "description": "Food delivery platform offering deals on meals and snacks.",
+    "brand_logo": "https://i.ibb.co.com/dQ352nM/hungry.webp",
+    "coupons": [
+      {
+        "coupon_code": "FOOD50",
+        "discount": "50% off",
+        "expiry_date": "2024-12-20",
+        "categories": ["Food Delivery"]
+      }
+    ],
+    "shop_link": "https://www.hungrynaki.com",
+    "isSaleOn": true,
+    "rating": 4.5
+  },
+  {
+    "id": 4,
+    "brand_name": "Pickaboo",
+    "description": "Online electronics store with great discounts on gadgets and accessories.",
+    "brand_logo": "https://i.ibb.co.com/S7NrN8y/pickaboo.png",
+    "coupons": [
+      {
+        "coupon_code": "TECH100",
+        "discount": "BDT 100 off",
+        "expiry_date": "2024-12-31",
+        "categories": ["Electronics"]
+      }
+    ],
+    "shop_link": "https://www.pickaboo.com",
+    "isSaleOn": false,
+    "rating": 4.4
+  },
+  {
+    "id": 5,
+    "brand_name": "Chaldal",
+    "description": "Grocery delivery service providing fresh food at your doorstep.",
+    "brand_logo": "https://i.ibb.co.com/T4vnn14/chaldal.jpg",
+    "coupons": [
+      {
+        "coupon_code": "GROCERY10",
+        "discount": "BDT 100 off",
+        "expiry_date": "2024-12-31",
+        "categories": ["Groceries"]
+      }
+    ],
+    "shop_link": "https://www.chaldal.com",
+    "isSaleOn": true,
+    "rating": 4.7
+  },
+  {
+    "id": 6,
+    "brand_name": "AjkerDeal",
+    "description": "Discount store for electronics, clothing, and lifestyle items.",
+    "brand_logo": "https://i.ibb.co.com/DLq5bLW/ajkerdeal.png",
+    "coupons": [
+      {
+        "coupon_code": "DEAL20",
+        "discount": "20% off",
+        "expiry_date": "2024-11-30",
+        "categories": ["Fashion", "Electronics"]
+      }
+    ],
+    "shop_link": "https://www.ajkerdeal.com",
+    "isSaleOn": true,
+    "rating": 4.3
+  },
+  {
+    "id": 7,
+    "brand_name": "BanglaShoppers",
+    "description": "Authentic cosmetics and beauty products with great discounts.",
+    "brand_logo": "https://i.ibb.co.com/vvPG0N5/banglashoper.jpg",
+    "coupons": [
+      {
+        "coupon_code": "BEAUTY15",
+        "discount": "15% off",
+        "expiry_date": "2024-12-15",
+        "categories": ["Beauty", "Personal Care"]
+      }
+    ],
+    "shop_link": "https://banglashoppers.com",
+    "isSaleOn": false,
+    "rating": 4.4
+  },
+  {
+    "id": 8,
+    "brand_name": "Evaly",
+    "description": "Online marketplace offering exclusive discounts on a variety of products.",
+    "brand_logo": "https://i.ibb.co.com/YyVWMHF/evaly.jpg",
+    "coupons": [
+      {
+        "coupon_code": "EVALY30",
+        "discount": "30% off",
+        "expiry_date": "2024-11-30",
+        "categories": ["Electronics", "Fashion"]
+      }
+    ],
+    "shop_link": "https://www.evaly.com.bd",
+    "isSaleOn": true,
+    "rating": 4.2
+  },
+  {
+    "id": 9,
+    "brand_name": "Foodpanda",
+    "description": "Fast food delivery with discounts on partner restaurants.",
+    "brand_logo": "https://i.ibb.co.com/KLVWC8w/foodpanda.png",
+    "coupons": [
+      {
+        "coupon_code": "PANDA25",
+        "discount": "25% off",
+        "expiry_date": "2024-12-25",
+        "categories": ["Food Delivery"]
+      }
+    ],
+    "shop_link": "https://www.foodpanda.com.bd",
+    "isSaleOn": true,
+    "rating": 4.6
+  },
+  {
+    "id": 10,
+    "brand_name": "Bikroy",
+    "description": "Buy and sell everything from electronics to furniture.",
+    "brand_logo": "https://i.ibb.co.com/ZzYNLJD/bikroy.png",
+    "coupons": [
+      {
+        "coupon_code": "SELLFAST",
+        "discount": "BDT 100 off",
+        "expiry_date": "2024-12-31",
+        "categories": ["Classifieds"]
+      }
+    ],
+    "shop_link": "https://www.bikroy.com",
+    "isSaleOn": false,
+    "rating": 4.5
+  },
+  {
+    "id": 11,
+    "brand_name": "Shwapno",
+    "description": "Retail chain offering discounts on groceries and household items.",
+    "brand_logo": "https://i.ibb.co.com/pZHZSGk/shwapno.png",
+    "coupons": [
+      {
+        "coupon_code": "SAVE50",
+        "discount": "BDT 50 off",
+        "expiry_date": "2024-12-31",
+        "categories": ["Groceries", "Household"]
+      }
+    ],
+    "shop_link": "https://www.shwapno.com",
+    "isSaleOn": true,
+    "rating": 4.6
+  },
+  {
+    "id": 12,
+    "brand_name": "Banglalink",
+    "description": "Telecom service provider offering exclusive recharge deals.",
+    "brand_logo": "https://i.ibb.co.com/khv8HS3/banglalink.jpg",
+    "coupons": [
+      {
+        "coupon_code": "RECHARGE10",
+        "discount": "10% cashback",
+        "expiry_date": "2024-12-31",
+        "categories": ["Mobile Recharge"]
+      }
+    ],
+    "shop_link": "https://www.banglalink.net",
+    "isSaleOn": true,
+    "rating": 4.8
+  }
+]
