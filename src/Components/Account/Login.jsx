@@ -1,10 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { sendPasswordResetEmail } from "firebase/auth";
+import auth from "../firebase/firebase.config";
 
 const Login = () => {
   const { handleGoogleLogin, handleSignin } = useContext(AuthContext);
+
   const [error, setError] = useState("");
+  const emailRef = useRef();
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
@@ -31,6 +37,20 @@ const Login = () => {
       navigate(location.state.from);
     });
   };
+  const handleForgotPassword = () => {
+    const emailValue = emailRef.current.value;
+    if (!emailValue) {
+      toast.success(`Please Provide a valid Email`, {
+        position: "top-right",
+      });
+    } else {
+      sendPasswordResetEmail(auth, emailValue).then(() => {
+        toast.success(`Password Reset Email Sent, Please Check your Email`, {
+          position: "top-right",
+        });
+      });
+    }
+  };
   return (
     <div className=" min-h-screen">
       <div className="hero-content flex-col lg:ml-20">
@@ -46,6 +66,7 @@ const Login = () => {
               <input
                 type="email"
                 name="email"
+                ref={emailRef}
                 placeholder="email"
                 className="input input-bordered"
                 required
@@ -63,7 +84,10 @@ const Login = () => {
                 required
               />
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <a
+                  onClick={handleForgotPassword}
+                  className="label-text-alt link link-hover"
+                >
                   Forgot password?
                 </a>
               </label>

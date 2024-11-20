@@ -5,7 +5,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Header = () => {
   const { user, handleLogout } = useContext(AuthContext);
-  // console.log(contextInfo)
+
   const handleSignOut = () => {
     handleLogout()
       .then(() => {
@@ -38,7 +38,8 @@ const Header = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to='/about'
+        <NavLink
+          to="/about"
           className={({ isActive }) =>
             `${isActive ? "underline text-amber-600" : ""}`
           }
@@ -59,7 +60,8 @@ const Header = () => {
       {user && (
         <>
           <li>
-            <NavLink to='/profile'
+            <NavLink
+              to="/profile"
               className={({ isActive }) =>
                 `${isActive ? "underline text-amber-600" : ""}`
               }
@@ -68,7 +70,8 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to='/coupon'
+            <NavLink
+              to="/coupon"
               className={({ isActive }) =>
                 `${isActive ? "underline text-amber-600" : ""}`
               }
@@ -138,7 +141,13 @@ const Header = () => {
         <div className="navbar-end gap-2">
           {user?.email ? (
             <>
-              <span><img src={user.photoURL} className="w-12 rounded-full object-cover" alt="" /></span>
+              <span>
+                <img
+                  src={user.photoURL}
+                  className="w-12 rounded-full object-cover"
+                  alt=""
+                />
+              </span>
               <button onClick={handleSignOut} className="btn btn-outline">
                 Logout
               </button>
