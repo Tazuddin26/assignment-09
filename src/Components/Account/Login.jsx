@@ -5,10 +5,11 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { sendPasswordResetEmail } from "firebase/auth";
 import auth from "../firebase/firebase.config";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const Login = () => {
   const { handleGoogleLogin, handleSignin } = useContext(AuthContext);
-
+const [passwordShow, setPasswordShow] =useState(false)
   const [error, setError] = useState("");
   const emailRef = useRef();
   const location = useLocation();
@@ -72,17 +73,23 @@ const Login = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type={passwordShow ? "text" : "password"}
                 name="password"
                 placeholder="password"
                 className="input input-bordered"
                 required
               />
+              <button
+                onClick={() => setPasswordShow(!passwordShow)}
+                className="absolute btn btn-xs right-1 top-12"
+              >
+                {passwordShow ? <IoEyeOffOutline /> : <IoEyeOutline />}
+              </button>
               <label className="label">
                 <a
                   onClick={handleForgotPassword}

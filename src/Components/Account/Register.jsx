@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const Register = () => {
   const navigate = useNavigate();
   const { handleCreateUser, profileManage } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const [passwordShow, setPasswordShow] = useState(false)
   const handleRegister = (e) => {
     setError("");
     e.preventDefault();
@@ -27,9 +29,9 @@ const Register = () => {
     //   return;
     // }
     handleCreateUser(email, password).then((res) => {
-       e.target.reset();
+      e.target.reset();
       profileManage(name, image);
-     navigate('/')
+      navigate("/");
     });
   };
   return (
@@ -75,24 +77,25 @@ const Register = () => {
                 className="input input-bordered"
                 required
               />
-              {/* <input
-                type="file"
-                name="image"
-                className="file-input file-input-bordered w-full max-w-md"
-                required
-              /> */}
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
+
               <input
-                type="password"
+                type={passwordShow ? "text" : "password"}
                 name="password"
                 placeholder="password"
                 className="input input-bordered"
                 required
               />
+              <button
+                onClick={() => setPasswordShow(!passwordShow)}
+                className="absolute btn btn-xs right-1 top-12"
+              >
+                {passwordShow ? <IoEyeOffOutline /> : <IoEyeOutline />}
+              </button>
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Register</button>
