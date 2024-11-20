@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import DisplayBrand from "../DisplayBrand/DisplayBrand";
 import Marquee from "react-fast-marquee";
@@ -17,6 +17,9 @@ const Home = () => {
         ))}
       </div>
       {/* </Marquee> */}
+      <button className="btn btn-accent">
+        <NavLink to='/brands'>Show More</NavLink>
+      </button>
     </div>
   );
 };
