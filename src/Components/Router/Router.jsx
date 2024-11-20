@@ -8,10 +8,12 @@ import Register from "../Account/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Profile from "../Account/Profile";
 import CouponPage from "../CouponPage/CouponPage";
+import ErrorPage from "../ErrorPage/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
@@ -56,11 +58,13 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: '/coupon',
-        element: <PrivateRoute>
-          <CouponPage/>
-        </PrivateRoute>
-      }
+        path: "/coupon",
+        element: (
+          <PrivateRoute>
+            <CouponPage />
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);

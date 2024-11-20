@@ -3,7 +3,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const DisplayBrands = ({ brandData }) => {
-  const { brand_logo, brand_name, coupons, id, rating, description, isSaleOn } =
+  const { brand_logo, brand_name, coupons, id, description, isSaleOn } =
     brandData;
   //     const [view, setview] = useState('')
   //     const handleCoupon = () => {
@@ -36,7 +36,9 @@ const DisplayBrands = ({ brandData }) => {
                     Sale is on!
                   </div>
                 )}
-                <button className="btn btn-outline">View Coupons</button>
+                <NavLink to={`/details/${id}`}>
+                  <button className="btn btn-outline">View Coupons</button>
+                </NavLink>
               </div>
             ))}
           </p>

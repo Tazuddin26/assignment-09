@@ -9,7 +9,8 @@ const DisplayBrand = ({ brandData }) => {
     <div className="lg:w-full">
       <div className="card bg-base-100 shadow-xl border w-full h-[250px] ">
         <figure className="px-2 pt-2 ">
-          <NavLink to={`/details/${id}`}>
+          {/* <NavLink to={`/details/${id}`}> */}
+          <NavLink to='/brands'>
             <img
               src={brand_logo}
               alt="logo"

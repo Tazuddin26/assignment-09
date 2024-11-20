@@ -9,17 +9,20 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      {/* <Marquee pauseOnHover={true} className="space-x-4 cursor-pointer"> */}
-      <p className="lg:ml-20 text-2xl font-bold mt-4 text-center">ALL Discount Brand</p>
-      <div className=" mt-5 grid lg:grid-cols-6 grid-cols-2 max-w-7xl mx-auto gap-3 lg:p-0 p-3 ">
-        {allBrandData.map((brandData) => (
-          <DisplayBrand key={brandData.id} brandData={brandData} />
-        ))}
-      </div>
-      {/* </Marquee> */}
-      <button className="btn btn-accent">
+      <p className="lg:ml-20 text-2xl font-bold mt-4 text-center">
+        Most Top Discount Brands
+      </p>
+      <Marquee pauseOnHover={true} className="space-x-4 cursor-pointer mb-10">
+        <div className=" mt-5 flex gap-3 lg:p-0 p-3 ">
+          {allBrandData.map((brandData) => (
+            <DisplayBrand key={brandData.id} brandData={brandData} />
+          ))}
+        </div>
+      </Marquee>
+
+      {/* <button className="btn btn-accent">
         <NavLink to='/brands'>Show More</NavLink>
-      </button>
+      </button> */}
     </div>
   );
 };

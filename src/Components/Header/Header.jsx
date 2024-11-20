@@ -67,6 +67,15 @@ const Header = () => {
               Profile
             </NavLink>
           </li>
+          <li>
+            <NavLink to='/coupon'
+              className={({ isActive }) =>
+                `${isActive ? "underline text-amber-600" : ""}`
+              }
+            >
+              Coupons
+            </NavLink>
+          </li>
         </>
       )}
       <li>
@@ -126,10 +135,10 @@ const Header = () => {
         {/* <NavLink to='/login' className="navbar-end">
           <button className="btn">{user?.email }</button>
         </NavLink> */}
-        <div className="navbar-end">
+        <div className="navbar-end gap-2">
           {user?.email ? (
             <>
-              <span><img src={user.photoURL} className="w-14 rounded-full object-cover" alt="" /></span>
+              <span><img src={user.photoURL} className="w-12 rounded-full object-cover" alt="" /></span>
               <button onClick={handleSignOut} className="btn btn-outline">
                 Logout
               </button>
