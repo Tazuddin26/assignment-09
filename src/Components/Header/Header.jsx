@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/discount.png";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { PiUserCircleLight } from "react-icons/pi";
 
 const Header = () => {
   const { user, handleLogout } = useContext(AuthContext);
@@ -116,18 +117,44 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-sky-50 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
+              <div className="flex items-center gap-2 ml-3 my-2 rounded-xl">
+                {user?.email ? (
+                  <>
+                    <span className="flex items-center gap-2 rounded-xl ">
+                      <img
+                        src={user.photoURL}
+                        className="w-10 rounded-full object-cover"
+                        alt=""
+                      />
+                      <p className=" menu-horizontal  text-base font-bold ">
+                        {user.displayName}
+                      </p>
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span>
+                      <PiUserCircleLight
+                        size={44}
+                        className="font-extraLight"
+                      />
+                    </span>
+                  </>
+                )}
+              </div>
+              <hr />
               {menuLink}
             </ul>
           </div>
-          <Link className=" flex items-center gap-2">
+          <Link className=" flex items-center gap-2 ">
             <img
               src={Logo}
-              className="w-14 object-cover rounded-full transition-all duration-300 scale-105"
+              className="w-12 object-cover rounded-full transition-all duration-300 scale-105"
               alt=""
             />
-            <p className="text-2xl font-semibold text-amber-800 font-serif">
+            <p className="lg:text-2xl font-semibold text-amber-800 font-serif">
               Discount Shop
             </p>
           </Link>
@@ -141,10 +168,13 @@ const Header = () => {
         <div className="navbar-end gap-2">
           {user?.email ? (
             <>
-              <span>
+              <span className="items-center justify-center gap-2 border border-black rounded-xl p-1 navbar-center hidden lg:flex ">
+                <p className=" menu-horizontal  text-base font-bold ">
+                  {user.displayName}
+                </p>
                 <img
                   src={user.photoURL}
-                  className="w-12 rounded-full object-cover"
+                  className="w-10 rounded-full object-cover"
                   alt=""
                 />
               </span>
@@ -153,9 +183,14 @@ const Header = () => {
               </button>
             </>
           ) : (
-            <NavLink to="/login">
-              <button className="btn btn-outline">Login </button>
-            </NavLink>
+            <>
+              <span>
+                <PiUserCircleLight size={44} className="font-extraLight" />
+              </span>
+              <NavLink to="/login">
+                <button className="btn btn-outline">Login </button>
+              </NavLink>
+            </>
           )}
         </div>
       </div>

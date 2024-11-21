@@ -9,20 +9,19 @@ import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const Login = () => {
   const { handleGoogleLogin, handleSignin } = useContext(AuthContext);
-const [passwordShow, setPasswordShow] =useState(false)
+  const [passwordShow, setPasswordShow] = useState(false);
   const [error, setError] = useState("");
   const emailRef = useRef();
   const location = useLocation();
-  console.log(location);
+
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+
     handleSignin(email, password)
       .then((res) => {
-        console.log(res.user);
         e.target.reset();
 
         navigate("/");

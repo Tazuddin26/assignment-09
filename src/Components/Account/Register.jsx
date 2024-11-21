@@ -5,9 +5,10 @@ import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const Register = () => {
   const navigate = useNavigate();
-  const { handleCreateUser, profileManage } = useContext(AuthContext);
+  const { handleCreateUser, profileManage, profileManageUpdate } =
+    useContext(AuthContext);
   const [error, setError] = useState("");
-  const [passwordShow, setPasswordShow] = useState(false)
+  const [passwordShow, setPasswordShow] = useState(false);
   const handleRegister = (e) => {
     setError("");
     e.preventDefault();
@@ -31,6 +32,10 @@ const Register = () => {
     handleCreateUser(email, password).then((res) => {
       e.target.reset();
       profileManage(name, image);
+      profileManageUpdate({ displayName: name, photoURL: image })
+        .then(() => {
+          navigate('/profile')
+        }).catch(error => error.message)
       navigate("/");
     });
   };
@@ -68,12 +73,12 @@ const Register = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">User Image</span>
+                <span className="label-text">Image URL</span>
               </label>
               <input
                 type="text"
                 name="image"
-                placeholder="email"
+                placeholder="Image URL"
                 className="input input-bordered"
                 required
               />

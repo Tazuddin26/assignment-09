@@ -8,6 +8,7 @@ import {
   signInWithPopup,
   onAuthStateChanged,
   updateProfile,
+
 } from "firebase/auth";
 import auth from "../Components/firebase/firebase.config";
 
@@ -34,6 +35,10 @@ const AuthProvider = ({ children }) => {
     });
   };
 
+  const profileManageUpdate = (updatedData) => {
+    return updateProfile(auth.currentUser, updatedData)
+  }
+
   const handleLogout = () => {
     setLoading(true);
     return signOut(auth);
@@ -47,6 +52,7 @@ const AuthProvider = ({ children }) => {
     handleGoogleLogin,
     profileManage,
     handleLogout,
+    profileManageUpdate,
   };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
