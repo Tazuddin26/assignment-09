@@ -24,7 +24,7 @@ const BrandDetails = () => {
     }));
     setCouponCode("");
     toast.success(`Copy ${brand_name} Coupon Code Successfully!`, {
-      position: "top-right",
+      position: "top-center",
     });
   };
 

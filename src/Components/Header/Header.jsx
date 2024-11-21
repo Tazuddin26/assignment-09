@@ -16,7 +16,7 @@ const Header = () => {
     <>
       {user && (
         <>
-          <li>
+          <li className="font-mono">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -26,7 +26,7 @@ const Header = () => {
               Home
             </NavLink>
           </li>
-          <li>
+          <li className="font-mono ">
             <NavLink
               to="/brands"
               className={({ isActive }) =>
@@ -36,37 +36,18 @@ const Header = () => {
               Brand
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/profile"
-              className={({ isActive }) =>
-                `${isActive ? "underline text-amber-600" : ""}`
-              }
-            >
-              Profile
-            </NavLink>
-          </li>
-          {/* <li>
-            <NavLink
-              to="/coupon"
-              className={({ isActive }) =>
-                `${isActive ? "underline text-amber-600" : ""}`
-              }
-            >
-              Coupons
-            </NavLink>
-          </li> */}
-          <li>
+
+          <li className="font-mono">
             <NavLink
               to="/cashback"
               className={({ isActive }) =>
                 `${isActive ? "underline text-amber-600" : ""}`
               }
             >
-              Bonus Cash Back
+              Bonus
             </NavLink>
           </li>
-          <li>
+          {/* <li className="text-xl">
             <NavLink
               to="/about"
               className={({ isActive }) =>
@@ -75,13 +56,33 @@ const Header = () => {
             >
               About
             </NavLink>
+          </li> */}
+          <li className=" font-mono">
+            <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                `${isActive ? "underline text-amber-600" : ""}`
+              }
+            >
+              My-Profile
+            </NavLink>
+          </li>
+          <li className="font-mono">
+            <NavLink
+              to="/updateprofile"
+              className={({ isActive }) =>
+                `${isActive ? "underline text-amber-600" : ""}`
+              }
+            >
+              Update-Profile
+            </NavLink>
           </li>
         </>
       )}{" "}
     </>
   );
   return (
-    <div className="bg-sky-200 border">
+    <div className="bg-sky-100 border">
       <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -147,7 +148,7 @@ const Header = () => {
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex ">
-          <ul className=" menu-horizontal px-1 gap-3">{menuLink}</ul>
+          <ul className=" menu-horizontal px-1 gap-5 ">{menuLink}</ul>
         </div>
         {/* <NavLink to='/login' className="navbar-end">
           <button className="btn">{user?.email }</button>
@@ -155,7 +156,7 @@ const Header = () => {
         <div className="navbar-end gap-2">
           {user?.email ? (
             <>
-              <span className="items-center justify-center gap-2 border border-black rounded-xl p-1 navbar-center hidden lg:flex ">
+              <span className="items-center justify-center gap-2  p-1 navbar-center hidden lg:flex ">
                 <p className=" menu-horizontal  text-base font-bold ">
                   {user.displayName}
                 </p>

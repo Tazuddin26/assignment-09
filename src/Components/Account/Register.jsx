@@ -32,10 +32,10 @@ const Register = () => {
     handleCreateUser(email, password).then((res) => {
       e.target.reset();
       profileManage(name, image);
-      profileManageUpdate({ displayName: name, photoURL: image })
-        .then(() => {
-          navigate('/profile')
-        }).catch(error => error.message)
+      // profileManageUpdate({ displayName: name, photoURL: image })
+      //   .then(() => {
+      //     navigate('/profile')
+      //   }).catch(error => error.message)
       navigate("/");
     });
   };

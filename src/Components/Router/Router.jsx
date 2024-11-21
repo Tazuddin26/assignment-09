@@ -11,6 +11,7 @@ import CouponPage from "../CouponPage/CouponPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import BonusCashBack from "../BonusCashBack/BonusCashBack";
 import About from "../Account/About";
+import UpdateProfile from "../Account/UpdateProfile";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -75,14 +76,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      // {
-      //   path: "/updateprofile",
-      //   element: (
-      //     <PrivateRoute>
-      //       <UpdateProfile />
-      //     </PrivateRoute>
-      //   ),
-      // },
+      {
+        path: "/updateprofile",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
+          </PrivateRoute>
+        ),
+      },
       {
         path: "/cashback",
         element: (

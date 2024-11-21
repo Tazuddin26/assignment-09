@@ -7,6 +7,7 @@ import { sendPasswordResetEmail } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
+import { AiOutlineLogin } from "react-icons/ai";
 
 const Login = () => {
   const { handleGoogleLogin, handleSignin } = useContext(AuthContext);
@@ -102,7 +103,7 @@ const Login = () => {
             </div>
             <div className="form-control mt-6">
               <button type="submit" className="btn btn-primary">
-                Login
+                <span><AiOutlineLogin size={30}/></span>Login
               </button>
             </div>
           </form>
