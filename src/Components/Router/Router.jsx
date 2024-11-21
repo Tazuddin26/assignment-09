@@ -12,6 +12,10 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import BonusCashBack from "../BonusCashBack/BonusCashBack";
 import About from "../Account/About";
 import UpdateProfile from "../Account/UpdateProfile";
+// const dataLoader = async() => {
+//   const res = await fetch("./coupondata.json")
+//   const data= await
+// }
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +29,7 @@ const router = createBrowserRouter([
             <Home />
           </PrivateRoute>
         ),
-        loader: () => fetch("coupondata.json"),
+        loader: () => fetch("/coupondata.json"),
       },
       {
         path: "/login",
@@ -58,7 +62,7 @@ const router = createBrowserRouter([
             <Brand />
           </PrivateRoute>
         ),
-        loader: () => fetch("coupondata.json"),
+        loader: () => fetch("/coupondata.json"),
       },
       {
         path: "/profile",
@@ -91,7 +95,7 @@ const router = createBrowserRouter([
             <BonusCashBack />
           </PrivateRoute>
         ),
-        loader: () => fetch("coupondata.json"),
+        loader: () => fetch("/coupondata.json"),
       },
       {
         path: "/about",

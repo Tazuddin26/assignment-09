@@ -18,8 +18,8 @@ const BrandDetails = () => {
 
   const [couponCode, setCouponCode] = useState("");
   const handleCopyCoupon = (coupon) => {
-    setCouponCode((prev) => ({
-      ...prev,
+    setCouponCode((previous) => ({
+      ...previous,
       [coupon]: true,
     }));
     setCouponCode("");
@@ -135,11 +135,9 @@ const BrandDetails = () => {
       </div>
     );
   } else {
-    return (
-      <div className=" border card card-body max-w-5xl mx-auto my-20 bg-sky-50 ">
-        <img src={noData} alt="" className="rounded-2xl object-cover" />
-      </div>
-    );
+    <div className=" border card card-body max-w-5xl mx-auto my-20 bg-sky-50 ">
+      <img src={noData} alt="" className="rounded-2xl object-cover" />
+    </div>;
   }
 };
 
