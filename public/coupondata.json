@@ -14,6 +14,7 @@
     ],
     "shop_link": "https://www.daraz.com.bd",
     "isSaleOn": true,
+    "cashBack": "2% Cash Back",
     "rating": 4.8
   },
   {
@@ -31,6 +32,7 @@
     ],
     "shop_link": "https://www.rokomari.com",
     "isSaleOn": true,
+    "cashBack": "4% Cash Back",
     "rating": 4.6
   },
   {
@@ -48,6 +50,7 @@
     ],
     "shop_link": "https://www.hungrynaki.com",
     "isSaleOn": true,
+    "cashBack": "7% Cash Back",
     "rating": 4.5
   },
   {
@@ -65,6 +68,7 @@
     ],
     "shop_link": "https://www.pickaboo.com",
     "isSaleOn": false,
+    "cashBack": "2% Cash Back",
     "rating": 4.4
   },
   {
@@ -82,6 +86,7 @@
     ],
     "shop_link": "https://www.chaldal.com",
     "isSaleOn": true,
+    "cashBack": "1% Cash Back",
     "rating": 4.7
   },
   {
@@ -99,6 +104,7 @@
     ],
     "shop_link": "https://www.ajkerdeal.com",
     "isSaleOn": true,
+    "cashBack": "3% Cash Back",
     "rating": 4.3
   },
   {
@@ -116,6 +122,7 @@
     ],
     "shop_link": "https://banglashoppers.com",
     "isSaleOn": false,
+    "cashBack": "1.5% Cash Back",
     "rating": 4.4
   },
   {
@@ -133,6 +140,7 @@
     ],
     "shop_link": "https://www.evaly.com.bd",
     "isSaleOn": true,
+    "cashBack": "4% Cash Back",
     "rating": 4.2
   },
   {
@@ -150,6 +158,7 @@
     ],
     "shop_link": "https://www.foodpanda.com.bd",
     "isSaleOn": true,
+    "cashBack": "2% Cash Back",
     "rating": 4.6
   },
   {
@@ -167,6 +176,7 @@
     ],
     "shop_link": "https://www.bikroy.com",
     "isSaleOn": false,
+    "cashBack": "2% Cash Back",
     "rating": 4.5
   },
   {
@@ -184,6 +194,7 @@
     ],
     "shop_link": "https://www.shwapno.com",
     "isSaleOn": true,
+    "cashBack": "1% Cash Back",
     "rating": 4.6
   },
   {
@@ -201,6 +212,7 @@
     ],
     "shop_link": "https://www.banglalink.net",
     "isSaleOn": true,
+    "cashBack": "8% Cash Back",
     "rating": 4.8
   }
 ]

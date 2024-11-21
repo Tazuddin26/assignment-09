@@ -92,6 +92,16 @@ const Header = () => {
           Register
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/cashback"
+          className={({ isActive }) =>
+            `${isActive ? "underline text-amber-600" : ""}`
+          }
+        >
+          Bonus Cash Back
+        </NavLink>
+      </li>
     </>
   );
   return (

@@ -1,16 +1,14 @@
-import { key } from "localforage";
 import { NavLink } from "react-router-dom";
-
 /* eslint-disable react/prop-types */
 const DisplayBrand = ({ brandData }) => {
-  const { brand_logo, brand_name, coupons, id } = brandData;
+  const { brand_logo, brand_name, coupons } = brandData;
 
   return (
     <div className="lg:w-full">
       <div className="card bg-base-100 shadow-xl border w-full h-[250px] ">
         <figure className="px-2 pt-2 ">
           {/* <NavLink to={`/details/${id}`}> */}
-          <NavLink to='/brands'>
+          <NavLink to="/brands">
             <img
               src={brand_logo}
               alt="logo"
@@ -22,10 +20,9 @@ const DisplayBrand = ({ brandData }) => {
         <hr className=" mt-6" />
         <div className="card-body items-center text-center ">
           <h2 className="card-title ">{brand_name}</h2>
-          <p className="w-full text-sky-700" >
-            {coupons.map((coupon) => (
-              // eslint-disable-next-line react/jsx-key
-              <p>{coupon.discount} </p>
+          <p className="w-full text-sky-700">
+            {coupons.map((coupon, idx) => (
+              <p key={idx}>{coupon.discount} </p>
             ))}
           </p>
         </div>

@@ -10,6 +10,7 @@ import Profile from "../Account/Profile";
 import CouponPage from "../CouponPage/CouponPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import UpdateProfile from "../Account/UpdateProfile";
+import BonusCashBack from "../BonusCashBack/BonusCashBack";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -74,6 +75,11 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: '/cashback',
+        element: <BonusCashBack />,
+         loader: () => fetch("coupondata.json"),
+      }
     ],
   },
 ]);

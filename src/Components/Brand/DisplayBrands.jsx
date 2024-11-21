@@ -1,16 +1,11 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+
 import { NavLink } from "react-router-dom";
 
 const DisplayBrands = ({ brandData }) => {
   const { brand_logo, brand_name, coupons, id, description, isSaleOn } =
     brandData;
-  //     const [view, setview] = useState('')
-  //     const handleCoupon = () => {
-  //         const coupon = if (isSaleOn) {
-
-  //     }
-  // }
+  
 
   return (
     <div className="">
@@ -28,9 +23,9 @@ const DisplayBrands = ({ brandData }) => {
 
           <p className="text-base">{description}</p>
           <p className="w-full mt-6">
-            {coupons.map((coupon) => (
+            {coupons.map((coupon,idx) => (
               // eslint-disable-next-line react/jsx-key
-              <div>
+              <div key={idx}>
                 {isSaleOn && (
                   <div className="animate__animated animate__bounce animate__infinite animate__slower text-xl text-amber-600 ">
                     Sale is on!
