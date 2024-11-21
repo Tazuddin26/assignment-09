@@ -9,11 +9,12 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Profile from "../Account/Profile";
 import CouponPage from "../CouponPage/CouponPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import UpdateProfile from "../Account/UpdateProfile";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -62,6 +63,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <CouponPage />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/updateprofile",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
           </PrivateRoute>
         ),
       },
