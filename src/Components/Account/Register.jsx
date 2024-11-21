@@ -17,18 +17,18 @@ const Register = () => {
     const password = e.target.password.value;
     const image = e.target.image.value;
  
-    // if (password.length < 6) {
-    //   setError("Password Length must be at least 6 character");
-    //   return;
-    // }
-    // if (!/[a-z]/.test(password)) {
-    //   setError("Must have a Lowercase letter in the password ");
-    //   return;
-    // }
-    // if (!/[A-Z]/.test(password)) {
-    //   setError("Must have an Uppercase letter in the password ");
-    //   return;
-    // }
+    if (password.length < 6) {
+      setError("Password Length must be at least 6 character");
+      return;
+    }
+    if (!/[a-z]/.test(password)) {
+      setError("Must have a Lowercase letter in the password ");
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      setError("Must have an Uppercase letter in the password ");
+      return;
+    }
     handleCreateUser(email, password).then((res) => {
       e.target.reset();
       profileManage(name, image);
