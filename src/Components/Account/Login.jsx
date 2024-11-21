@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { sendPasswordResetEmail } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const { handleGoogleLogin, handleSignin } = useContext(AuthContext);
@@ -22,10 +23,11 @@ const Login = () => {
 
     handleSignin(email, password)
       .then((res) => {
+        
         e.target.reset();
-
         navigate("/");
         navigate(location.state.from);
+
       })
       .catch((err) => {
         setError(err.message);
@@ -106,7 +108,12 @@ const Login = () => {
           </form>
           {error && <p className="text-red-500">{error}</p>}
           <NavLink className="btn btn-outline mx-8">
-            <button onClick={googleHandler}>Google Login</button>
+            <button onClick={googleHandler} className="flex gap-2 items-center text-base">
+              <span>
+                <FcGoogle size={30}/>
+              </span>
+              Google Login
+            </button>
           </NavLink>
           <p className="ml-6 p-2">
             If you want to access the website? Please{" "}

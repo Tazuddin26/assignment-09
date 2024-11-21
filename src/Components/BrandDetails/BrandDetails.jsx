@@ -15,7 +15,7 @@ const BrandDetails = () => {
     rating,
     shop_link,
   } = useLoaderData();
-  // console.log(coupons)
+
   const [couponCode, setCouponCode] = useState("");
   const handleCopyCoupon = (coupon) => {
     setCouponCode((prev) => ({

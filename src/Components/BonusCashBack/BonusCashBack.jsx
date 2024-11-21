@@ -5,7 +5,7 @@ import { RiArrowUpDownFill } from "react-icons/ri";
 
 const BonusCashBack = () => {
   const cashBackBonus = useLoaderData();
-  console.log();
+
   return (
     <div>
       <p className="lg:ml-20 ml-4 text-2xl font-bold mt-4 ">

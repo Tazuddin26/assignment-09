@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom";
-// import DisplayBrand from "../DisplayBrand/DisplayBrand";
 import DisplayBrands from "./DisplayBrands";
 
 const Brand = () => {
@@ -10,7 +9,7 @@ const Brand = () => {
         All Brands Cash Back Event
       </h1>
       <div className=" mt-10 grid lg:grid-cols-4 grid-cols-1 gap-3 lg:p-0 p-3 ">
-        {brands.map((brandData) => (
+        {brands?.map((brandData) => (
           <DisplayBrands key={brandData.id} brandData={brandData} />
         ))}
       </div>

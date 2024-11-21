@@ -9,57 +9,33 @@ const Header = () => {
 
   const handleSignOut = () => {
     handleLogout()
-      .then(() => {
-        console.log("user logout");
-      })
-      .catch((error) => {
-        console.log("Error", error.message);
-      });
+      .then(() => {})
+      .catch((error) => error.message);
   };
   const menuLink = (
     <>
-      <li>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `${isActive ? "underline text-amber-600" : ""}`
-          }
-        >
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/brands"
-          className={({ isActive }) =>
-            `${isActive ? "underline text-amber-600" : ""}`
-          }
-        >
-          Brand
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            `${isActive ? "underline text-amber-600" : ""}`
-          }
-        >
-          About
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/login"
-          className={({ isActive }) =>
-            `${isActive ? "underline text-amber-600" : ""}`
-          }
-        >
-          Login
-        </NavLink>
-      </li>
       {user && (
         <>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `${isActive ? "underline text-amber-600" : ""}`
+              }
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/brands"
+              className={({ isActive }) =>
+                `${isActive ? "underline text-amber-600" : ""}`
+              }
+            >
+              Brand
+            </NavLink>
+          </li>
           <li>
             <NavLink
               to="/profile"
@@ -70,7 +46,7 @@ const Header = () => {
               Profile
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               to="/coupon"
               className={({ isActive }) =>
@@ -79,33 +55,33 @@ const Header = () => {
             >
               Coupons
             </NavLink>
+          </li> */}
+          <li>
+            <NavLink
+              to="/cashback"
+              className={({ isActive }) =>
+                `${isActive ? "underline text-amber-600" : ""}`
+              }
+            >
+              Bonus Cash Back
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `${isActive ? "underline text-amber-600" : ""}`
+              }
+            >
+              About
+            </NavLink>
           </li>
         </>
-      )}
-      <li>
-        <NavLink
-          to="/register"
-          className={({ isActive }) =>
-            `${isActive ? "underline text-amber-600" : ""}`
-          }
-        >
-          Register
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/cashback"
-          className={({ isActive }) =>
-            `${isActive ? "underline text-amber-600" : ""}`
-          }
-        >
-          Bonus Cash Back
-        </NavLink>
-      </li>
+      )}{" "}
     </>
   );
   return (
-    <div className="bg-sky-200 border  ">
+    <div className="bg-sky-200 border">
       <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -158,7 +134,8 @@ const Header = () => {
               {menuLink}
             </ul>
           </div>
-          <Link className=" flex items-center gap-2 ">
+
+          <NavLink to="/" className=" flex items-center gap-2 ">
             <img
               src={Logo}
               className="w-12 object-cover rounded-full transition-all duration-300 scale-105"
@@ -167,7 +144,7 @@ const Header = () => {
             <p className="lg:text-2xl font-semibold text-amber-800 font-serif">
               Discount Shop
             </p>
-          </Link>
+          </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className=" menu-horizontal px-1 gap-3">{menuLink}</ul>

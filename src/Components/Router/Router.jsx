@@ -9,8 +9,8 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Profile from "../Account/Profile";
 import CouponPage from "../CouponPage/CouponPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
-import UpdateProfile from "../Account/UpdateProfile";
 import BonusCashBack from "../BonusCashBack/BonusCashBack";
+import About from "../Account/About";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,7 +19,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: (
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        ),
         loader: () => fetch("coupondata.json"),
       },
       {
@@ -48,7 +52,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/brands",
-        element: <Brand />,
+        element: (
+          <PrivateRoute>
+            <Brand />
+          </PrivateRoute>
+        ),
         loader: () => fetch("coupondata.json"),
       },
       {
@@ -67,19 +75,31 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      // {
+      //   path: "/updateprofile",
+      //   element: (
+      //     <PrivateRoute>
+      //       <UpdateProfile />
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
-        path: "/updateprofile",
+        path: "/cashback",
         element: (
           <PrivateRoute>
-            <UpdateProfile />
+            <BonusCashBack />
+          </PrivateRoute>
+        ),
+        loader: () => fetch("coupondata.json"),
+      },
+      {
+        path: "/about",
+        element: (
+          <PrivateRoute>
+            <About />
           </PrivateRoute>
         ),
       },
-      {
-        path: '/cashback',
-        element: <BonusCashBack />,
-         loader: () => fetch("coupondata.json"),
-      }
     ],
   },
 ]);
