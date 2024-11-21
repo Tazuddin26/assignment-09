@@ -2,7 +2,6 @@ import { NavLink, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import DisplayBrand from "../DisplayBrand/DisplayBrand";
 import Marquee from "react-fast-marquee";
-import BonusCashBack from "../BonusCashBack/BonusCashBack";
 
 const Home = () => {
   const allBrandData = useLoaderData();

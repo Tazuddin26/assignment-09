@@ -31,7 +31,7 @@ const DisplayBrands = ({ brandData }) => {
                     Sale is on!
                   </div>
                 )}
-                <NavLink to={`/details/${id}`}>
+                <NavLink to={`/brands/${id}`}>
                   <button className="btn btn-outline">View Coupons</button>
                 </NavLink>
               </div>
